@@ -2,11 +2,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+
 // include your styles into the webpack bundle
 import "../styles/index.css";
 
 //import your own components
-import Home from "./component/home.jsx";
+import SecondsCounter from "./component/SecondsCounter.jsx";
+
+
+//numero de segundos que han pasado desde que se inició la app
+
+let seconds = 0;
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+setInterval(() => {
+    ReactDOM.render(<SecondsCounter seconds = {seconds}/>, document.querySelector("#app")); seconds ++;
+},1000);
+
