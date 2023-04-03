@@ -1,10 +1,13 @@
 import React from "react"
+import "../../styles/index.css";
 
 export default function SecondsCounter ({seconds}) {
 return (
+<div className = "App">
 
-<p>Soy un contador, creeme, han pasado {seconds} segundos.</p>
+<p>{seconds}</p>
 
+</div>
 );
 
 }
